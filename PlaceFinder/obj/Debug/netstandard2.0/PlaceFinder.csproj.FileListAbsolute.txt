@@ -1,0 +1,17 @@
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\bin\Debug\netstandard2.0\PlaceFinder.deps.json
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\bin\Debug\netstandard2.0\PlaceFinder.dll
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\bin\Debug\netstandard2.0\PlaceFinder.pdb
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\obj\Debug\netstandard2.0\PlaceFinder.csproj.AssemblyReference.cache
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\obj\Debug\netstandard2.0\PlaceFinder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\obj\Debug\netstandard2.0\Views\PlacesPage.xaml.g.cs
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\obj\Debug\netstandard2.0\PlaceFinder.AssemblyInfoInputs.cache
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\obj\Debug\netstandard2.0\PlaceFinder.AssemblyInfo.cs
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\obj\Debug\netstandard2.0\PlaceFinder.csproj.CoreCompileInputs.cache
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\obj\Debug\netstandard2.0\PlaceFinder.dll
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\obj\Debug\netstandard2.0\PlaceFinder.pdb
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\obj\Debug\netstandard2.0\Views\PlacesDetailsPage.xaml.g.cs
+C:\Users\Portia\source\PlaceFinder\PlaceFinder\obj\Debug\netstandard2.0\PlaceFinder.sourcelink.json

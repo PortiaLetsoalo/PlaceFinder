@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PlaceFinder.Views.PlacesDetailsPage"
+             Title="{Binding Title}"
+             BackgroundColor="White">
+
+    <Grid>
+        <ScrollView>
+            <StackLayout Orientation="Vertical"
+                         Padding="0,10,0,0"
+                         Margin="20,40,20,0">
+
+                <!-- Header: PlaceFinder and Search Icon -->
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             Padding="0,10,0,0">
+
+                    <!--<Image Source="searchH.png"
+                           HeightRequest="24"
+                           WidthRequest="24"
+                           Margin="10,0,0,0"
+                           VerticalOptions="Center" />-->
+
+                    <Label Text="PlaceFinder"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="black"
+                           VerticalOptions="Center" />
+
+                </StackLayout>
+
+                <!-- Details Frame -->
+                <Frame CornerRadius="5"
+                       BackgroundColor="#ecf0f1"
+                       Margin="20,20,20,10"
+                       Padding="20"
+                       BorderColor="#212428"
+                       HasShadow="false">
+
+                    <StackLayout Padding="10"
+                                 Spacing="10">
+
+                        <!-- Name -->
+                        <Label Text="Name :"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="Black" />
+                        <Label Text="{Binding PlaceDetail.Name}"
+                               FontSize="14"
+                               TextColor="Black" />
+
+                        <!-- Formatted Address -->
+                        <Label Text="Formatted Address :"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="Black" />
+                        <Label Text="{Binding PlaceDetail.FormattedAddress}"
+                               FontSize="14"
+                               TextColor="Black" />
+
+                        <!-- Vicinity -->
+                        <Label Text="Vicinity :"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="Black" />
+                        <Label Text="{Binding PlaceDetail.Vicinity}"
+                               FontSize="14"
+                               TextColor="Black" />
+
+                        <!-- URL -->
+                        <Label Text="URL :"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="Black" />
+                        <Label Text="{Binding PlaceDetail.Url}"
+                               FontSize="14"
+                               TextColor="Blue" />
+
+                        <!-- Latitude and Longitude -->
+                        <Label Text="Coordinates :"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="Black" />
+                        <Label Text="{Binding PlaceDetail.Latitude, StringFormat='Latitude: {0}'}"
+                               FontSize="14"
+                               TextColor="Black" />
+                        <Label Text="{Binding PlaceDetail.Longitude, StringFormat='Longitude: {0}'}"
+                               FontSize="14"
+                               TextColor="Black" />
+
+                        <!-- UtcOffset -->
+                        <Label Text="UTC Offset :"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="Black" />
+                        <Label Text="{Binding PlaceDetail.UtcOffset, StringFormat='UTC Offset: {0} minutes'}"
+                               FontSize="14"
+                               TextColor="Black" />
+
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+
+        <ActivityIndicator IsRunning="{Binding IsLoading}"
+                           IsVisible="{Binding IsLoading}"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           Color="Black" />
+
+    </Grid>
+
+</ContentPage>
