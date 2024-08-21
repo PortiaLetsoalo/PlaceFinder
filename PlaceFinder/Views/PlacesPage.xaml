@@ -37,7 +37,9 @@
 
                 <SearchBar Text="{Binding SearchQueryText, Mode=TwoWay}"
                            AutomationId="ContactListSearchAId" 
-                           Placeholder="Search places..."/>
+                           Placeholder="Search places..."
+                           TextChanged="OnSearchBarTextChanged"
+                           />
             </Frame>
 
             <ListView x:Name="listview" 
@@ -49,6 +51,7 @@
                       HasUnevenRows="True"
                       SeparatorVisibility="None"
                       BackgroundColor="White"
+                      ItemTapped="OnItemTapped"
                       IsGroupingEnabled="False">
                 <ListView.ItemTemplate>
                     <DataTemplate>

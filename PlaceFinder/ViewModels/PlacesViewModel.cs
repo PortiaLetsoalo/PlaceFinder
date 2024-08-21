@@ -23,6 +23,7 @@ namespace PlaceFinder.ViewModels
         private Place _selectedPlace;
         public string UserName { get; set; }
         public string Password { get; set; }
+        private bool _isNavigating = false;
 
         public string SearchQueryText
         {
@@ -88,13 +89,30 @@ namespace PlaceFinder.ViewModels
 
         private async Task OnPlaceSelected()
         {
-            var parameters = new NavigationParameters { { "selectedPlace", SelectedPlace } };
-            await NavigationService.NavigateAsync("PlacesDetailsPage", parameters);
+            if (_isNavigating)
+                return;
+
+            try
+            {
+                _isNavigating = true;
+
+                var parameters = new NavigationParameters { { "selectedPlace", SelectedPlace } };
+                await NavigationService.NavigateAsync("PlacesDetailsPage", parameters);
+            }
+            finally
+            {
+                _isNavigating = false;
+            }
         }
 
         public override async void OnNavigatedTo(INavigationParameters parameters)
         {
-             await _placeFinderService.GetTokenAsync(UserName ?? "", Password ?? "");
+            await _placeFinderService.GetTokenAsync(UserName ?? "", Password ?? "");
+        }
+
+        public void ClearSearchResults()
+        {
+            Places = new ObservableCollection<Place>();
         }
 
 
