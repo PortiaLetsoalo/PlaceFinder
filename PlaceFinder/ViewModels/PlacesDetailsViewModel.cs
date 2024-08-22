@@ -11,7 +11,6 @@ namespace PlaceFinder.ViewModels
         private readonly IPlaceFinderService _placeFinderService;
         private LocationInfo _placeDetail;
         private bool _isLoading;
-
         public LocationInfo PlaceDetail
         {
             get => _placeDetail;
@@ -40,12 +39,16 @@ namespace PlaceFinder.ViewModels
             }
         }
 
-        private async Task LoadPlaceDetails(string placeId)
+        public async Task LoadPlaceDetails(string placeId)
         {
             IsLoading = true;
 
             var results = await _placeFinderService.GetPlaceAsync(placeId);
-            PlaceDetail = results.Data;
+
+            if (results != null)
+            {
+                PlaceDetail = results.Data;
+            }
 
             IsLoading = false;
         }
