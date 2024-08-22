@@ -37,7 +37,6 @@ namespace PlaceFinder
             containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
-            containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             containerRegistry.RegisterForNavigation<PlacesPage, PlacesViewModel>();
             containerRegistry.RegisterForNavigation<PlacesDetailsPage, PlacesDetailsViewModel>();
         }
