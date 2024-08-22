@@ -19,7 +19,7 @@ namespace UniTest
             _placeFinderServiceMock = new Mock<IPlaceFinderService>();
             _navigationServiceMock = new Mock<INavigationService>();
 
-            _viewModel = new PlacesDetailsViewModel(_navigationServiceMock.Object, (Unity.IUnityContainer)_placeFinderServiceMock.Object);
+            _viewModel = new PlacesDetailsViewModel(_navigationServiceMock.Object,_placeFinderServiceMock.Object);
         }
 
         [Test]
