@@ -23,10 +23,10 @@ namespace PlaceFinder.ViewModels
             set => SetProperty(ref _isLoading, value);
         }
 
-        public PlacesDetailsViewModel(INavigationService navigationService, IUnityContainer unityContainer)
+        public PlacesDetailsViewModel(INavigationService navigationService, IPlaceFinderService placeFinderService)
             : base(navigationService)
         {
-            _placeFinderService = unityContainer.Resolve<IPlaceFinderService>();
+            _placeFinderService = placeFinderService;
             Title = "";
         }
 
