@@ -49,8 +49,6 @@ public class PlacesViewModel : ViewModelBase
         _placeFinderService = placeFinderService;
         Places = new ObservableCollection<Place>();
         PerformSearchCommand = new DelegateCommand(async () => await PerformSearch());
-
-        // Initialize ItemTappedCommand with a lambda to call OnItemTapped
         ItemTappedCommand = new DelegateCommand<Place>(OnItemTapped);
     }
 

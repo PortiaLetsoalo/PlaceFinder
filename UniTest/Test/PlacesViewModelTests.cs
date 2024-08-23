@@ -37,14 +37,11 @@ namespace UniTest.Test
         [Test]
         public async Task ItemTappedCommand_ShouldNavigateToDetailsPage()
         {
-            // Arrange
+
             var place = new Place { MainText = "Eiffel Tower", Description = "Famous landmark" };
 
-            // Act
-            // Simulate item being tapped
             ((DelegateCommand<Place>)_viewModel.ItemTappedCommand).Execute(place);
 
-            // Assert
             _navigationServiceMock.Verify(n => n.NavigateAsync("PlacesDetailsPage",
                 It.Is<NavigationParameters>(p => p["selectedPlace"] == place)), Times.Once);
         }
