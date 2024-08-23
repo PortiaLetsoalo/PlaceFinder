@@ -15,7 +15,12 @@
                 <StackLayout Orientation="Horizontal"
                              HorizontalOptions="Center"
                              Padding="0,10,0,0">
-
+                    <Image Source="search.png"
+                                  HeightRequest="24"
+                                  WidthRequest="24"
+                                  Margin="10,0,0,0"
+                                  VerticalOptions="Center" />
+                    
                     <Label Text="PlaceFinder"
                            FontSize="20"
                            FontAttributes="Bold"

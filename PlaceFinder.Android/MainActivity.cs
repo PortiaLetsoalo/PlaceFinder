@@ -12,6 +12,7 @@ namespace PlaceFinder.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             base.OnCreate(savedInstanceState);
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

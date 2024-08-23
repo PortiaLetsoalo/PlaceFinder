@@ -1,9 +1,11 @@
 using PlaceFinder.Services;
+using PlaceFinder.Settings;
 using PlaceFinder.ViewModels;
 using PlaceFinder.Views;
 using Prism;
 using Prism.Ioc;
 using Prism.Unity;
+using System.ComponentModel;
 using Unity;
 using Unity.Lifetime;
 using Xamarin.Essentials.Implementation;
@@ -22,12 +24,12 @@ namespace PlaceFinder
         protected override async void OnInitialized()
         {
             InitializeComponent();
-            Settings.PlaceFinderSettings.BackendUrl = "https://staging.api.eos.kerridgecs.online";
             await NavigationService.NavigateAsync("NavigationPage/PlacesPage");
         }
 
         public void RegisterServicesTypes(IUnityContainer container)
         {
+            container.RegisterType<IPreferencesWrapper, PreferencesWrapper>(new ContainerControlledLifetimeManager());
             container.RegisterType<IPlaceFinderService, PlaceFinderService>(new ContainerControlledLifetimeManager());
         }
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
