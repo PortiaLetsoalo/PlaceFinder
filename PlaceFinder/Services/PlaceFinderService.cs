@@ -11,6 +11,7 @@ namespace PlaceFinder.Services
     {
         public string Token { get; set; }
         public string BackendUrl { get; set; }
+        public string TokenUrl { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         private readonly PlaceFinderSettings _settings;
@@ -19,13 +20,14 @@ namespace PlaceFinder.Services
         {
             _settings = new PlaceFinderSettings(preferencesWrapper);
             BackendUrl = _settings.BackendUrl;
+            TokenUrl = _settings.TokenUrl;
             UserName = _settings.UserName;
             Password = _settings.Password;
         }
 
         public async Task<ApiResponse<Token>> GetTokenAsync()
         {
-            var options = new RestClientOptions("https://staging.identity.eos.kerridgecs.online");
+            var options = new RestClientOptions(TokenUrl);
             var client = new RestClient(options);
             var request = new RestRequest("/connect/token", Method.Post);
             request.AddHeader("Content-Type", "application/x-www-form-urlencoded");

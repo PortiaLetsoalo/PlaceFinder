@@ -13,8 +13,14 @@ namespace PlaceFinder.Settings
 
         public string BackendUrl
         {
-            get => _preferencesWrapper.Get("BackendUrl", string.Empty);
+            get => _preferencesWrapper.Get("BackendUrl", "https://staging.api.eos.kerridgecs.online");
             set => _preferencesWrapper.Set("BackendUrl", value);
+        }
+
+        public string TokenUrl
+        {
+            get => _preferencesWrapper.Get("TokenUrl", "https://staging.identity.eos.kerridgecs.online");
+            set => _preferencesWrapper.Set("TokenUrl", value);
         }
 
         public string UserName
